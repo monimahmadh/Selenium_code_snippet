@@ -1,0 +1,8 @@
+# selenium 4
+from selenium import webdriver
+from selenium.webdriver.edge.service import Service as EdgeService
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+options = webdriver.EdgeOptions()
+options.add_experimental_option("detach", True)
+
+driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=options)

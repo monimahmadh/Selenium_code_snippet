@@ -10,3 +10,9 @@ options.add_experimental_option("detach", True)
 
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+
+
+url = "https://www.your_url.com"
+driver.get(url)
+html = driver.page_source
+soup = BeautifulSoup(html, "lxml")

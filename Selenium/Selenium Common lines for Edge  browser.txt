@@ -8,3 +8,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=options)
+
+
+
+url = "https://www.your_url.com"
+driver.get(url)
+html = driver.page_source
+soup = BeautifulSoup(html, "lxml") 
